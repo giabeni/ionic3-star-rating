@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { StarRating } from './components/ionic3-star-rating-component';
 import { IonicModule } from 'ionic-angular';
 var StarRatingModule = (function () {
@@ -19,7 +19,10 @@ var StarRatingModule = (function () {
                     ],
                     exports: [
                         StarRating
-                    ]
+                    ],
+                    schemas: [
+                        NO_ERRORS_SCHEMA
+                    ],
                 },] },
     ];
     /** @nocollapse */

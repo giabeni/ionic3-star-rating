@@ -40,6 +40,8 @@ export class StarRating {
   activeIcon : string = 'ios-star';
   @Input()
   defaultIcon : string = 'ios-star-outline';
+  @Input()
+  object?: any;
   Math: any;
   parseFloat : any;
 

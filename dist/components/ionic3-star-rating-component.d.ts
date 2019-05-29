@@ -9,6 +9,7 @@ export declare class StarRating {
     defaultIcon: string;
     Math: any;
     parseFloat: any;
+    object?: any;
     constructor(events: Events);
     changeRating(event: any): void;
 }

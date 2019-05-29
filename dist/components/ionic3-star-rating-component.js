@@ -11,6 +11,7 @@ var StarRating = (function () {
         this.defaultColor = '#f4f4f4';
         this.activeIcon = 'ios-star';
         this.defaultIcon = 'ios-star-outline';
+        this.object = null;
         this.Math = Math;
         this.parseFloat = parseFloat;
     }
@@ -20,7 +21,7 @@ var StarRating = (function () {
         // event is different for firefox and chrome
         this.rating = event.target.id ? parseInt(event.target.id) + 1 : parseInt(event.target.parentElement.id) + 1;
         // subscribe this event to get the changed value in ypour parent compoanent
-        this.events.publish('star-rating:changed', this.rating);
+        this.events.publish('star-rating:changed', {object: this.object, rating: this.rating});
     };
     StarRating.decorators = [
         { type: Component, args: [{
@@ -40,6 +41,7 @@ var StarRating = (function () {
         "defaultColor": [{ type: Input },],
         "activeIcon": [{ type: Input },],
         "defaultIcon": [{ type: Input },],
+        "object": [{ type: Input },],
     };
     return StarRating;
 }());
